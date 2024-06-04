@@ -1,7 +1,12 @@
 // 플러터를 실행하기 위해 반드시 필요한 material 패키지! => 어플에 대한 기본 디자인 불러오기
 import 'package:flutter/material.dart';
+import 'package:flutter0603/ex02_column.dart';
+import 'package:flutter0603/ex03_image.dart';
+import 'package:flutter0603/ex04_image.dart';
+import 'package:flutter0603/ex04_image2.dart';
 
 import 'ex01_icon.dart';
+import 'ex04_image.dart';
 
 // main() : 프로그램을 시작할 수 있는 시작점!
 void main() {
@@ -25,7 +30,7 @@ class MyApp extends StatelessWidget {
       //   useMaterial3: true,
       // ),
       // home : 어플이 시작되었을 때 가장 먼저 보여주고 싶은 화면을 연결!
-      home: ExIcon(),
+      home: FinalImage(),
     );
   }
 }
