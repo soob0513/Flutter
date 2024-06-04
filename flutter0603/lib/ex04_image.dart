@@ -1,4 +1,3 @@
-// 선생님 풀이
 import 'package:flutter/material.dart';
 
 class Ex04Image extends StatelessWidget {
