@@ -3,6 +3,10 @@ import 'package:flutter0605/ex01_Container.dart';
 import 'package:flutter0605/ex02_example.dart';
 import 'package:flutter0605/ex03_width.dart';
 import 'package:flutter0605/ex04_SizedBox.dart';
+import 'package:flutter0605/ex05_SizedBox.dart';
+import 'package:flutter0605/ex06_Flexible.dart';
+import 'package:flutter0605/ex07_Domino.dart';
+import 'package:flutter0605/ex08_keypad.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +19,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: ExSizedBox(),
+      home: ExKeypad(),
     );
   }
 }
