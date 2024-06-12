@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter0611/ex01_Button.dart';
 import 'package:flutter0611/ex02_checkBox.dart';
 import 'package:flutter0611/ex03_switchButton.dart';
+import 'package:flutter0611/ex04_radioButton.dart';
+import 'package:flutter0611/ex05_textField.dart';
+import 'package:flutter0611/ex06_Login.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +23,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: ExSwitch(),
+      home: ExLogin(),
     );
   }
 }
