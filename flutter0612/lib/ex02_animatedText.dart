@@ -18,33 +18,39 @@ class ExAnimatedText extends StatelessWidget {
       fontFamily: 'Horizon',
     );
 
-    return Center(
-      child: SizedBox(
-        width: 250.0,
-        child: AnimatedTextKit(
-          animatedTexts: [
-            ColorizeAnimatedText(
-              'Larry Page',
-              textStyle: colorizeTextStyle,
-              colors: colorizeColors,
+    return Scaffold(
+      body : SafeArea(
+        child: Center(
+          child: SizedBox(
+
+            width: 500.0,
+            child: AnimatedTextKit(
+              animatedTexts: [
+                ColorizeAnimatedText(
+                  'Hello world!',
+                  textStyle: colorizeTextStyle,
+                  colors: colorizeColors,
+                ),
+                ColorizeAnimatedText(
+                  '반갑습니다',
+                  textStyle: colorizeTextStyle,
+                  colors: colorizeColors,
+                ),
+                ColorizeAnimatedText(
+                  'Fighting!!',
+                  textStyle: colorizeTextStyle,
+                  colors: colorizeColors,
+                ),
+              ],
+              isRepeatingAnimation: true,
+              onTap: () {
+                print("Tap Event");
+              },
             ),
-            ColorizeAnimatedText(
-              'Bill Gates',
-              textStyle: colorizeTextStyle,
-              colors: colorizeColors,
-            ),
-            ColorizeAnimatedText(
-              'Steve Jobs',
-              textStyle: colorizeTextStyle,
-              colors: colorizeColors,
-            ),
-          ],
-          isRepeatingAnimation: true,
-          onTap: () {
-            print("Tap Event");
-          },
+          ),
         ),
-      ),
+      )
     );
+
   }
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter0612/ex01_toast.dart';
 import 'package:flutter0612/ex02_animatedText.dart';
+import 'package:flutter0612/ex03_onboarding.dart';
 
 void main() {
   runApp(const MyApp());
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: ExAnimatedText(),
+      home: ExOnboarding(),
     );
   }
 }
