@@ -52,12 +52,23 @@ class _ExLoginState extends State<ExLogin> {
                 ),
                 SizedBox(height: 30,),
                 ElevatedButton(onPressed: (){
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(content: Text('${emailCon.text}님 환영합니다!')),
-                  );
-                  // 화면 이동
-                  Navigator.push(context, MaterialPageRoute(builder: (_) => dataCheck()));
-                }, child: Text('로그인하기', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black,),),
+
+                  // 로그인을 할 수 있는 사용자인지 체크 후 페이지 이동!
+                  if (emailCon.text == 'smhrd' && pwCon.text == '123'){
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(content: Text('${emailCon.text}님 환영합니다!')),
+                    );
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (_) => dataCheck(email : emailCon.text, pw: pwCon.text,)));
+                  } else{
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(content: Text('로그인을 다시 시도하세요.')),
+                    );
+                  };
+
+                  }, child: Text('로그인하기',
+                      style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black,
+                      ),),
                   style: ButtonStyle(backgroundColor: WidgetStatePropertyAll(Colors.yellowAccent,)),),
               ],
             ),
@@ -69,13 +80,21 @@ class _ExLoginState extends State<ExLogin> {
 }
 
 class dataCheck extends StatelessWidget {
-  const dataCheck({super.key});
+  final String email; // 변수
+  final String pw;    // 변수
+
+  // const => 상수! 변하지 않는 값!
+  const dataCheck({super.key, required this.email, required this.pw});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Container(),
+        child: Center(
+          child: Container(
+            child: Text('$email님 환영합니다!', style: TextStyle(fontSize: 30,),),
+          ),
+        ),
       ),
     );
   }
