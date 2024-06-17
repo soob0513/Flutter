@@ -3,12 +3,12 @@ import 'package:flutter0613/bottomPage.dart';
 import 'package:flutter0613/loginPage.dart';
 import 'package:flutter0613/mainPage.dart';
 import 'package:flutter0613/popPage.dart';
-import 'package:flutter0613/screen/bluePage.dart';
-import 'package:flutter0613/screen/greenPage.dart';
-import 'package:flutter0613/screen/redPage.dart';
-import 'package:flutter0613/screen/routePage.dart';
+// import 'package:flutter0613/screen/bluePage.dart';
+// import 'package:flutter0613/screen/greenPage.dart';
+// import 'package:flutter0613/screen/redPage.dart';
+// import 'package:flutter0613/screen/routePage.dart';
 
-import 'config/routeName.dart';
+// import 'config/routeName.dart';
 
 void main() {
   runApp(const MyApp());
