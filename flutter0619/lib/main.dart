@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter0619/Weather/ex01_location.dart';
+import 'package:flutter0619/Weather/ex02_sample_weather.dart';
+import 'package:flutter0619/Weather/loading_page.dart';
 import 'package:flutter0619/ex02_jsonParsing.dart';
 
 void main() {
@@ -13,7 +15,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Location(),
+      theme: ThemeData(
+        fontFamily: "BME"
+      ),
+      home: LoadingPage(),
     );
   }
 }
